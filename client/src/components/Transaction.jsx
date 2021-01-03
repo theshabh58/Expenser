@@ -10,7 +10,7 @@ function Transaction(props) {
 
   const { deleteTransaction } = useContext(GlobalContext);
   console.log(deleteTransaction);
-  const cardValue = title + ": " + " $" + Math.abs(amount).toFixed(2);
+  const cardValue = title + ": $" + Math.abs(amount).toFixed(2);
   const red =
     "bg-red-50 rounded p-2 shadow-md border-r-8 border-secondary-200 hover:bg-red-200 transition duration-200 ease-in";
   const green =
