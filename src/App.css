@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body-styles {
+  @apply p-6 text-xl;
+}
+
+input [type="radio"] {
+  transform: scale(2);
+}
+
+.hover-shadows:hover {
+  @apply shadow-xl transition-shadow duration-700 ease-in-out;
+}
