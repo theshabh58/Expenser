@@ -38,7 +38,7 @@ export const GlobalProvider = ({ children }) => {
   async function deleteTransaction(id) {
     try {
       await axios.delete(
-        `https://thawing-wildwood-51446.herokuapp.com/api/v1/transactions/api/v1/transactions/${id}`
+        `https://thawing-wildwood-51446.herokuapp.com/api/v1/transactions/${id}`
       );
       dispatch({
         type: "DELETE_TRANSACTION",
@@ -60,7 +60,7 @@ export const GlobalProvider = ({ children }) => {
     };
     try {
       const res = await axios.post(
-        "https://thawing-wildwood-51446.herokuapp.com/api/v1/transactions/api/v1/transactions",
+        "https://thawing-wildwood-51446.herokuapp.com/api/v1/transactions",
         transaction,
         config
       );
