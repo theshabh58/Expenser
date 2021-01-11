@@ -3,7 +3,7 @@ import AppReducer from "./AppReducer";
 import axios from "axios";
 
 //Inital state
-
+const backendURI = process.env.BACKEND_URI;
 const initialState = {
   transactions: [],
   error: null,
@@ -20,7 +20,7 @@ export const GlobalProvider = ({ children }) => {
   //Actions
   async function getTransactions() {
     try {
-      let res = await axios.get("/api/v1/transactions");
+      let res = await axios.get(backendURI + "/api/v1/transactions");
       dispatch({
         type: "GET_TRANSACTION",
         payload: res.data.data,
@@ -35,7 +35,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function deleteTransaction(id) {
     try {
-      await axios.delete(`/api/v1/transactions/${id}`);
+      await axios.delete(backendURI + `/api/v1/transactions/${id}`);
       dispatch({
         type: "DELETE_TRANSACTION",
         payload: id,
@@ -55,7 +55,11 @@ export const GlobalProvider = ({ children }) => {
       },
     };
     try {
-      const res = await axios.post("/api/v1/transactions", transaction, config);
+      const res = await axios.post(
+        backendURI + "/api/v1/transactions",
+        transaction,
+        config
+      );
 
       dispatch({
         type: "ADD_TRANSACTION",
