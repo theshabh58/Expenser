@@ -36,10 +36,9 @@ function AddTransaction() {
     event.preventDefault();
     const sign = radioSelection === "expense" ? "-" : "+";
     const newTransaction = {
-      id: Math.floor(Math.random() * 1000000),
       text,
       amount: Number(sign + amount),
-      type: radioSelection,
+      typeOfEntry: radioSelection,
     };
     addTransaction(newTransaction);
     setText("");

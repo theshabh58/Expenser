@@ -1,18 +1,20 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+
 function Balance() {
   const { transactions } = useContext(GlobalContext);
+
+  console.log(transactions);
   const amounts = transactions.map((transaction) => transaction.amount);
   const totalAmount = amounts
-    .reduce((prevValue, currentValue) => {
-      return (prevValue += currentValue);
-    }, 0)
+    .reduce((prevValue, currentValue) => (prevValue += currentValue), 0)
     .toFixed(2);
 
   const balanceColor =
     totalAmount >= 0
       ? "px-20 py-4 rounded shadow-md hover-shadows bg-primary-100 "
       : "px-20 py-4 rounded shadow-md hover-shadows bg-secondary-200";
+
   return (
     <div className="body-styles flex justify-center">
       <div className={balanceColor}>

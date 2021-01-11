@@ -16,7 +16,7 @@ function CurrentScope() {
   ).toFixed(2);
 
   return (
-    <div className="flex flex-row p-6 justify-center text-black-200">
+    <div className="flex flex-row justify-center text-black-200">
       <div className="px-12 py-2 mx-4 bg-secondary-100 rounded shadow-md hover-shadows">
         <i class="fas fa-wallet"></i>
         <h3 className="text-xl">Budget</h3>
