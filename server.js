@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const colors = require("colors");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 dotenv.config({ path: "./config/.env" });
 const app = express();
@@ -14,7 +15,7 @@ if (process.env.NODE_ENV === "dev") {
   app.use(morgan("dev"));
 }
 connectDB();
-
+app.use(cors());
 app.use("/api/v1/transactions", transactionRouter);
 
 const port = process.env.PORT || "5000";
