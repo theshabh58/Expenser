@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import numberWithCommas from "../utils/format";
 
 function CurrentScope() {
   const { transactions } = useContext(GlobalContext);
@@ -21,14 +22,14 @@ function CurrentScope() {
         <i class="fas fa-wallet"></i>
         <h3 className="text-xl">Budget</h3>
         <h2 id="budget" className="text-2xl font-bold">
-          {"$ " + budget}
+          {"$ " + numberWithCommas(budget)}
         </h2>
       </div>
       <div className="px-12 py-2 mx-4 bg-secondary-200 rounded shadow-md hover-shadows">
         <i class="fas fa-umbrella-beach"></i>
         <h3 className="text-xl">Expenses</h3>
         <h2 id="expenses" className="text-2xl font-bold">
-          {"$ " + expenses}
+          {"$ " + numberWithCommas(expenses)}
         </h2>
       </div>
     </div>

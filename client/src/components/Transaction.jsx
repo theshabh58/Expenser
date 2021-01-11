@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { GlobalContext } from "../context/GlobalState";
+import numberWithCommas from "../utils/format";
 
 function Transaction(props) {
   const type = props.transactions.typeOfEntry;
@@ -9,7 +10,8 @@ function Transaction(props) {
   const amount = props.transactions.amount;
 
   const { deleteTransaction } = useContext(GlobalContext);
-  const cardValue = title + ": $" + Math.abs(amount).toFixed(2);
+  const cardTitle = title + ": $";
+  const cardAmount = numberWithCommas(Math.abs(amount).toFixed(2));
   const red =
     "bg-red-50 rounded p-2 shadow-md border-r-8 border-secondary-200 hover:bg-red-200 transition duration-200 ease-in";
   const green =
@@ -22,7 +24,6 @@ function Transaction(props) {
           color="secondary"
           size="small"
           onClick={() => {
-            console.log(props.transactions);
             deleteTransaction(props.transactions._id);
           }}
         >
@@ -30,7 +31,7 @@ function Transaction(props) {
         </IconButton>
       </div>
       <div className="relative float-left">
-        <p className="text-base">{cardValue}</p>
+        <p className="text-base">{cardTitle + cardAmount}</p>
       </div>
     </div>
   );

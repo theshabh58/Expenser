@@ -4,7 +4,6 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { GlobalContext } from "../context/GlobalState";
-
 const theme = createMuiTheme({
   typography: {
     fontFamily: "Arvo",

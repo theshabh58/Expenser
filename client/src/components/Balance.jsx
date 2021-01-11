@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-
+import numberWithCommas from "../utils/format";
 function Balance() {
   const { transactions } = useContext(GlobalContext);
 
-  console.log(transactions);
   const amounts = transactions.map((transaction) => transaction.amount);
   const totalAmount = amounts
     .reduce((prevValue, currentValue) => (prevValue += currentValue), 0)
@@ -21,7 +20,7 @@ function Balance() {
         <i class="fas fa-balance-scale"></i>
         <h2 className="text-black-200 text-2xl">Current Balance</h2>
         <h2 id="balance" className="font-bold text-2xl">
-          {"$ " + totalAmount}
+          {"$ " + numberWithCommas(totalAmount)}
         </h2>
       </div>
     </div>
