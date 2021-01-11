@@ -4,7 +4,7 @@ const colors = require("colors");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: "./config/.env" });
 const app = express();
 app.use(bodyParser.json());
 const transactionRouter = require("./routes/transactions");
