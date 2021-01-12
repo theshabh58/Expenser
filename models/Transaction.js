@@ -5,7 +5,6 @@ const TransactionSchema = new mongoose.Schema({
     type: String,
     trim: true,
     required: [true, "Please add a title"],
-    uppercase: true,
   },
   amount: {
     type: Number,

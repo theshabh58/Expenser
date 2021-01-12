@@ -13,9 +13,9 @@ function Transaction(props) {
   const cardTitle = title + ": $";
   const cardAmount = numberWithCommas(Math.abs(amount).toFixed(2));
   const red =
-    "bg-red-50 rounded p-2 shadow-md border-r-8 border-secondary-200 hover:bg-red-200 transition duration-200 ease-in";
+    "bg-red-50 rounded p-2 shadow-md border-r-8 border-secondary-200 hover:bg-red-200 transition duration-200 ease-in w-auto";
   const green =
-    "bg-green-50 rounded p-2 shadow-md border-r-8 border-secondary-100 hover:bg-green-200 transition duration-200 ease-in";
+    "bg-green-50 rounded p-2 shadow-md border-r-8 border-secondary-100 hover:bg-green-200 transition duration-200 ease-in w-60 w-auto";
 
   return (
     <div className={type === "budget" ? green : red}>

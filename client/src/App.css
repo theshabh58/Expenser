@@ -16,3 +16,7 @@ input [type="radio"] {
 .hover-shadows:hover {
   @apply shadow-xl transition-shadow duration-700 ease-in-out;
 }
+
+.focus-primary:focus {
+  @apply border-primary-200 bg-white ring-2 ring-primary-200 outline-none;
+}

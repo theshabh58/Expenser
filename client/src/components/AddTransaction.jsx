@@ -46,8 +46,8 @@ function AddTransaction() {
   }
 
   return (
-    <div className="body-styles font-bold border-primary-100 border-solid border-t-4">
-      <i class="fas fa-cart-plus fa-2x"></i>
+    <div className="body-styles font-bold border-primary-200 border-solid border-t-4">
+      <i className="fas fa-cart-plus fa-2x"></i>
       <h3 className="pt-6">Add a new transaction</h3>
       <section className="text-black-200">
         <div className="container px-8  pb-24 mx-auto lg:px-4 font-normal">
@@ -77,24 +77,24 @@ function AddTransaction() {
               <div className="relative">
                 <input
                   type="text"
-                  placeHolder="Title of Transaction"
+                  placeholder="Title of Transaction"
                   name="transactionTitle"
                   value={text}
                   onChange={handleTitleEntry}
-                  className="w-full px-4 py-2 mb-4 mr-4 text-base text-primary-200 bg-gray-100 border-transparent shadow-lg rounded-lg focus:border-primary-200 focus:bg-white focus:ring-0"
+                  className="w-full px-4 py-2 mb-4 mr-4 text-base text-primary-200 bg-gray-100 border-transparent shadow-lg rounded-lg focus-primary"
                 />
                 <div className="relative">
                   <input
                     type="number"
-                    placeHolder="Amount"
+                    placeholder="Amount"
                     name="transactionAmount"
                     value={amount}
                     onChange={handleAmountEntry}
-                    className="w-full px-4 py-2 mb-4 mr-4 text-base text-primary-200 bg-gray-100 border-transparent shadow-lg rounded-lg focus:border-primary-200 focus:bg-white focus:ring-0"
+                    className="w-full px-4 py-2 mb-4 mr-4 text-base text-primary-200 bg-gray-100 border-transparent shadow-lg rounded-lg focus-primary"
                   />
                 </div>
                 <button className="bg-primary-200 text-white w-full py-2 font-semibold rounded-lg shadow-lg transition duration-700 ease-in-out hover:bg-primary-100 hover:shadow-2xl focus:outline-none focus:ring-0">
-                  <i class="fas fa-plus-circle"></i> Add
+                  <i className="fas fa-plus-circle"></i> Add
                 </button>
               </div>
             </form>

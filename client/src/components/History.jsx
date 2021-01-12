@@ -11,11 +11,11 @@ function ExpenseHistroy() {
   }, []);
   return (
     <div className="body-styles">
-      <i class="fas fa-hourglass-half"></i>
+      <i className="fas fa-hourglass-half"></i>
       <h2 className="pb-6">Expense History</h2>
-      <div className="grid gap-5 md:grid-cols-5 sm:grid-cols-4 grid-cols-2">
+      <div className="grid gap-5 lg:grid-cols-5 md:grid-cols-3 grid-cols-1 justify-evenly">
         {transactions.map((items) => {
-          return <Transaction key={items.id} transactions={items} />;
+          return <Transaction key={items._id} transactions={items} />;
         })}
       </div>
     </div>

@@ -16,8 +16,8 @@ function App() {
           <CurrentScope />
           <ExpenseHistroy />
           <AddTransaction />
+          <Footer />
         </GlobalProvider>
-        <Footer />
       </div>
     </div>
   );

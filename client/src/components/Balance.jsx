@@ -17,7 +17,7 @@ function Balance() {
   return (
     <div className="body-styles flex justify-center">
       <div className={balanceColor}>
-        <i class="fas fa-balance-scale"></i>
+        <i className="fas fa-balance-scale"></i>
         <h2 className="text-black-200 text-2xl">Current Balance</h2>
         <h2 id="balance" className="font-bold text-2xl">
           {"$ " + numberWithCommas(totalAmount)}

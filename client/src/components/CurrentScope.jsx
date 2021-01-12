@@ -18,15 +18,15 @@ function CurrentScope() {
 
   return (
     <div className="flex flex-row justify-center text-black-200">
-      <div className="px-12 py-2 mx-4 bg-secondary-100 rounded shadow-md hover-shadows">
-        <i class="fas fa-wallet"></i>
+      <div className="px-12 py-2 mx-2 bg-secondary-100 rounded shadow-md hover-shadows">
+        <i className="fas fa-wallet"></i>
         <h3 className="text-xl">Budget</h3>
         <h2 id="budget" className="text-2xl font-bold">
           {"$ " + numberWithCommas(budget)}
         </h2>
       </div>
-      <div className="px-12 py-2 mx-4 bg-secondary-200 rounded shadow-md hover-shadows">
-        <i class="fas fa-umbrella-beach"></i>
+      <div className="px-12 py-2 mx-2 bg-secondary-200 rounded shadow-md hover-shadows">
+        <i className="fas fa-umbrella-beach"></i>
         <h3 className="text-xl">Expenses</h3>
         <h2 id="expenses" className="text-2xl font-bold">
           {"$ " + numberWithCommas(expenses)}
