@@ -6,6 +6,7 @@ import AddTransaction from "./AddTransaction";
 import CurrentScope from "./CurrentScope";
 import Footer from "./Footer";
 import { GlobalProvider } from "../context/GlobalState";
+
 function App() {
   return (
     <div>

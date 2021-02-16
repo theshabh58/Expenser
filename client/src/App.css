@@ -20,3 +20,42 @@ input [type="radio"] {
 .focus-primary:focus {
   @apply border-primary-200 bg-white ring-2 ring-primary-200 outline-none;
 }
+
+.header-background {
+  background-image: radial-gradient(
+    circle,
+    #10ddc2,
+    #00d4c1,
+    #00cac0,
+    #04c1bd,
+    #15b7b9
+  );
+}
+
+.input-styles {
+  @apply px-4 py-2 mb-4 mr-4 text-base text-primary-200 bg-gray-100 border-transparent shadow-lg rounded-lg focus-primary;
+}
+
+.input-styles:focus {
+  @apply focus-primary;
+}
+
+.btn-style {
+  @apply bg-primary-200 py-2 rounded shadow-lg transition duration-500 ease-in-out;
+}
+
+.btn-style:hover {
+  @apply bg-primary-100 shadow-xl;
+}
+
+.btn-style:focus {
+  @apply outline-none focus:ring-0;
+}
+
+.btn-outline {
+  @apply bg-transparent border-2 border-primary-200 text-primary-200 py-2 rounded shadow-lg transition duration-500 ease-in-out;
+}
+
+.btn-outline:hover {
+  @apply bg-primary-200 text-white border-transparent;
+}

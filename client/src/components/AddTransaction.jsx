@@ -50,7 +50,7 @@ function AddTransaction() {
       <i className="fas fa-cart-plus fa-2x"></i>
       <h3 className="pt-6">Add a new transaction</h3>
       <section className="text-black-200">
-        <div className="container px-8  pb-24 mx-auto lg:px-4 font-normal">
+        <div className="container px-8 pb-24 mx-auto lg:px-4 font-normal">
           <div className="flex flex-col w-full p-8 mx-auto mt-10 rounded-lg lg:w-2/6 md:w-1/2 md:ml-auto md:mt-0">
             <form onSubmit={formOnSubmit}>
               <div className="relative pb-6">
@@ -81,7 +81,7 @@ function AddTransaction() {
                   name="transactionTitle"
                   value={text}
                   onChange={handleTitleEntry}
-                  className="w-full px-4 py-2 mb-4 mr-4 text-base text-primary-200 bg-gray-100 border-transparent shadow-lg rounded-lg focus-primary"
+                  className="input-styles w-full"
                 />
                 <div className="relative">
                   <input
@@ -90,10 +90,10 @@ function AddTransaction() {
                     name="transactionAmount"
                     value={amount}
                     onChange={handleAmountEntry}
-                    className="w-full px-4 py-2 mb-4 mr-4 text-base text-primary-200 bg-gray-100 border-transparent shadow-lg rounded-lg focus-primary"
+                    className="input-styles w-full"
                   />
                 </div>
-                <button className="bg-primary-200 text-white w-full py-2 font-semibold rounded-lg shadow-lg transition duration-700 ease-in-out hover:bg-primary-100 hover:shadow-2xl focus:outline-none focus:ring-0">
+                <button className="bg-primary-200 text-white w-full py-2 font-semibold rounded shadow-lg transition duration-500 ease-in-out hover:bg-primary-100 hover:shadow-xl focus:outline-none focus:ring-0">
                   <i className="fas fa-plus-circle"></i> Add
                 </button>
               </div>
