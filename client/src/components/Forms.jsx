@@ -41,7 +41,7 @@ function TabbedForm() {
                 setOpenTab(2);
               }}
             >
-              <i class="fas fa-user-plus text-base px-2"></i> Sign Up
+              <i className="fas fa-user-plus text-base px-2"></i> Sign Up
             </a>
           </li>
         </ul>
@@ -49,12 +49,12 @@ function TabbedForm() {
           <div className="px-4 py-5 flex-auto">
             <div className="flex-auto">
               <div className={openTab === 1 ? "block" : "hidden"} id="signin">
-                <i class="fas fa-3x fa-id-badge"></i>
+                <i className="fas fa-3x fa-id-badge"></i>
                 <h1 className="p-4 text-2xl font-medium">Welcome back!</h1>
                 <SignIn />
               </div>
               <div className={openTab === 2 ? "block" : "hidden"} id="signup">
-                <i class="fas fa-3x fa-address-card"></i>
+                <i className="fas fa-3x fa-address-card"></i>
                 <h1 className="p-4 text-2xl font-medium">Create an Account.</h1>
                 <SignUp />
               </div>
